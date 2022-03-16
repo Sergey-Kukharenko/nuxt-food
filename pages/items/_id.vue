@@ -114,7 +114,7 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  width: 1000px;
+  max-width: 1000px;
   margin: 100px auto;
   display: grid;
   grid-template-columns: 400px 1fr;
@@ -125,15 +125,36 @@ export default {
 }
 
 .image {
-  grid-area: 1/1/2/2;
+  border-radius: 6px;
 }
 
-.options {
-  grid-area: 1/2/3/3;
-  position: relative;
+@media all and (min-width: 871px) {
+
+  .image {
+    grid-area: 1/1/2/2;
+    border-radius: 6px;
+  }
+
+  .options {
+    grid-area: 1/2/3/3;
+    position: relative;
+  }
+
+  .details {
+    grid-area: 2/1/3/2;
+  }
+
 }
 
-.details {
-  grid-area: 2/1/3/2;
+@media all and (max-width: 870px) {
+
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 20px;
+    margin: 40px auto;
+  }
+
 }
+
+
 </style>

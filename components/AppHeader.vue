@@ -5,7 +5,7 @@
         Nuxt Food App
       </h1>
       <button>
-        See restaurants >
+        See restaurants
       </button>
     </section>
   </div>
@@ -27,8 +27,17 @@ export default {};
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 0) 37%,
       rgba(0, 0, 0, 0.65) 100%
-    ),
-    url(~assets/headerimg.jpg) no-repeat center center scroll;
+  ),
+  url(~assets/headerimg.jpg) no-repeat center center scroll;
+}
+
+@media all and (max-width: 870px) {
+
+  .masthead {
+    height: auto;
+    padding: 40px 20px;
+  }
+
 }
 
 h1 {

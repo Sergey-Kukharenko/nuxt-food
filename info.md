@@ -7,7 +7,7 @@
 ## time
 
 ``` bash
-00.00.00
+00.04.58
 ```
 
 [sdras github](https://github.com/sdras/building-web-apps-with-vue)

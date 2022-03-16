@@ -21,7 +21,7 @@
               <p>{{ priceFormatting(menuItem.price) }}</p>
             </div>
             <nuxt-link :to="`items/${menuItem.id}`">
-              <button class="ghost">View Item ></button>
+              <button class="ghost">View Item</button>
             </nuxt-link>
           </div>
         </div>
