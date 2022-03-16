@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>Copyright, muthafucka</p>
+    <p>Copyright, Footer</p>
   </footer>
 </template>
 
