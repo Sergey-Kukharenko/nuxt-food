@@ -1,23 +1,25 @@
 <template>
   <main class="container">
-    <h1>Hi from home Page</h1>
     <AppHeader />
-    <AppRestaurantInfo />
+    <AppRestaurantInfo :datasource="fooddata" />
   </main>
 </template>
 
 <script>
-import AppHeader from "@/components/AppHeader";
-import AppRestaurantInfo from "@/components/AppRestaurantInfo";
+import AppHeader from '@/components/AppHeader.vue';
+import AppRestaurantInfo from '@/components/AppRestaurantInfo.vue';
+
+import { mapState } from 'vuex';
 
 export default {
   components: {
     AppHeader,
     AppRestaurantInfo
-}
+  },
+    computed: {
+    ...mapState([
+      'fooddata',
+    ])
+  },
 };
 </script>
-
-<style scoped>
-
-</style>

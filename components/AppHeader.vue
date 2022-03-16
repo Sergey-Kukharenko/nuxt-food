@@ -1,16 +1,18 @@
 <template>
-  <section class="masthead" aria-label="Image Description">
-    <h1>Nuxt Food App</h1>
-    <nuxt-link to="/restaurants">
-      <button>Find a restaurant</button>
-    </nuxt-link>
-  </section>
+  <div>
+    <section class="masthead" aria-label="Image Description">
+      <h1>
+        Nuxt Food App
+      </h1>
+      <button>
+        See restaurants >
+      </button>
+    </section>
+  </div>
 </template>
 
 <script>
-export default {
-  name: "AppHeader",
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
@@ -18,7 +20,6 @@ export default {
   width: 100%;
   height: 80vh;
   padding: 40px;
-  margin-bottom: 60px;
   overflow: hidden;
   background-size: cover !important;
   background: radial-gradient(
@@ -29,6 +30,7 @@ export default {
     ),
     url(~assets/headerimg.jpg) no-repeat center center scroll;
 }
+
 h1 {
   font-style: normal;
   font-weight: bold;
@@ -37,6 +39,6 @@ h1 {
   letter-spacing: 0.03em;
   line-height: 1;
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 </style>

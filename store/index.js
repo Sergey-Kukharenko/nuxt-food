@@ -1,15 +1,35 @@
+import { v4 as uuidv4 } from "uuid";
+
 export const state = () => ({
-  fooddata: []
-})
+  fooddata: [],
+  cart: []
+});
+
+export const getters = {
+  totalPrice: state => {
+    return state.cart.reduce((acc, currentItem) => {
+      return acc + +currentItem.totalPrice;
+    }, 0);
+  },
+  totalQuantity: state => {
+    return state.cart.reduce((acc, currentItem) => {
+      return acc + +currentItem.quantity;
+    }, 0);
+  }
+};
 
 export const mutations = {
   updateFoodData: (state, data) => {
-    state.fooddata = data
+    state.fooddata = data;
+  },
+  addToCart: (state, formOutput) => {
+    formOutput.id = uuidv4();
+    state.cart.push(formOutput);
   }
-}
+};
 
 export const actions = {
-  async getFoodData({state, commit}) {
+  async getFoodData({ state, commit }) {
     if (state.fooddata.length) return;
     try {
       await fetch(
@@ -23,11 +43,11 @@ export const actions = {
       )
         .then(response => response.json())
         .then(data => {
-          console.log(data)
+          console.log(data);
           commit("updateFoodData", data);
-        })
+        });
     } catch (err) {
       console.log(err);
     }
   }
-}
+};

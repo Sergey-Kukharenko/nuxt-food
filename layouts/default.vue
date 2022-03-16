@@ -9,9 +9,15 @@
 </template>
 
 <script>
-import AppFooter from "@/components/AppFooter";
+import AppMenu from "@/components/AppMenu.vue";
+import AppFooter from "@/components/AppFooter.vue";
 
-export default { components: { AppFooter } };
+export default {
+  components: {
+    AppMenu,
+    AppFooter
+  }
+};
 </script>
 
 <style>
